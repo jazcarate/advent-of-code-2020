@@ -1,0 +1,13 @@
+name: advent-of-code-2020
+version: 0.1.0
+
+authors:
+  - Joaquin Azcarate <j@florius.com.ar>
+
+targets:
+  advent-of-code-2020:
+    main: src/advent-of-code-2020.cr
+
+crystal: 0.35.1
+
+license: MIT
