@@ -1,2 +1,2 @@
 language = "crystal"
-run = "crystal run src/1.cr" ## TODO: Make a program to run other CRs
+run = "crystal spec" ## TODO: Make a program to run other CRs
