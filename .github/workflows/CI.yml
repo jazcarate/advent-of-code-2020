@@ -14,5 +14,8 @@ jobs:
     container:
       image: crystallang/crystal
     steps:
-      - uses: actions/checkout@v2
-      - run: crystal spec
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: shards install
+    - name: Run tests
+      run: crystal spec
