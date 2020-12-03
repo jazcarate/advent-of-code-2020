@@ -4,7 +4,7 @@
 
 Challenges for advent 2020 in crystal-lang.
 
-All this code was run in [repl.it](https://repl.it), so forking this repo should be enough to run it on your own, with no installation required
+All this code was run in [repl.it](https://repl.it), so forking this repo should be enough to run it on your own, with no installation required; but a VS code dev container is also provided, with debugging capabilities.
 
 
 ## Usage

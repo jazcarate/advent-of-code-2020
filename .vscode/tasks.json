@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run specs",
+            "command": "crystal spec --error-trace",
+            "type": "shell",
+            "args": [],
+            "group": "test",
+        },
+        {
+            "label": "Run program",
+            "type": "shell",
+            "command": "time crystal run ${file}",
+        }
+    ]
+}

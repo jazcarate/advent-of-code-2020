@@ -1,2 +1,2 @@
 language = "crystal"
-run = "crystal spec" ## TODO: Make a program to run other CRs
+run = "crystal spec --error-trace"

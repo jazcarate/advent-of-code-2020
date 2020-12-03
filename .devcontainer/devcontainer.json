@@ -1,0 +1,7 @@
+{
+	"name": "advent-of-code-2020",
+	"image": "crystallang/crystal",
+	"extensions": [
+		"faustinoaq.crystal-lang"
+	],
+}
