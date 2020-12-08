@@ -102,4 +102,13 @@ describe "Advent of code" do
       seat_id(seat("BBFFBBFRLL")).should eq(820)
     end
   end
+
+  describe "6" do
+    it "part 1" do
+      questions(["ab", "ac"]).should eq(3)
+      questions(["a", "b", "c"]).should eq(3)
+      questions(["abc"]).should eq(3)
+      questions(["a", "a", "a"]).should eq(1)
+    end
+  end
 end

@@ -1,6 +1,8 @@
 require "pars3k"
 include Pars3k
 
+require "../common"
+
 def end_of_input
   Parser(Int32).new do |context|
     if context.position >= context.parsing.size
@@ -84,17 +86,6 @@ def checked_fields
       key_value("cid", any_value),
     ])
   )
-end
-
-def span(arr, separator)
-  arr.reduce([[] of String]) { |acc, line|
-    if (line == separator)
-      acc << [] of String
-    else
-      acc.last << line
-    end
-    acc
-  }.map &.join(" ")
 end
 
 def contains_all?(fields)
