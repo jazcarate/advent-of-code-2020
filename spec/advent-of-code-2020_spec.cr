@@ -94,4 +94,12 @@ describe "Advent of code" do
       checked_fields.parse("iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719").should_not be_a(ParseError)
     end
   end
+
+  describe "5" do
+    it "part 1" do
+      seat_id(seat("BFFFBBFRRR")).should eq(567)
+      seat_id(seat("FFFBBBFRRR")).should eq(119)
+      seat_id(seat("BBFFBBFRLL")).should eq(820)
+    end
+  end
 end
