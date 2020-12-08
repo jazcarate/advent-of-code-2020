@@ -1,3 +1,5 @@
+require "pars3k"
+
 def span(arr, separator)
   arr.reduce([[] of String]) { |acc, line|
     if (line == separator)
@@ -7,4 +9,9 @@ def span(arr, separator)
     end
     acc
   }.map &.join(" ")
+end
+
+def parse!(parser, input)
+  res = parser.parse(input)
+  res.is_a?(ParseError) ? raise("Can't parse") : res
 end

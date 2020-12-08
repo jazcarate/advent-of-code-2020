@@ -105,10 +105,51 @@ describe "Advent of code" do
 
   describe "6" do
     it "part 1" do
-      questions(["ab", "ac"]).should eq(3)
-      questions(["a", "b", "c"]).should eq(3)
-      questions(["abc"]).should eq(3)
-      questions(["a", "a", "a"]).should eq(1)
+      question_any?(["ab", "ac"]).should eq(3)
+      question_any?(["a", "b", "c"]).should eq(3)
+      question_any?(["abc"]).should eq(3)
+      question_any?(["a", "a", "a"]).should eq(1)
+    end
+
+    it "part 2" do
+      question_all?(["ab", "ac"]).should eq(1)
+      question_all?(["a", "b", "c"]).should eq(0)
+      question_all?(["abc"]).should eq(3)
+      question_all?(["a", "a", "a"]).should eq(1)
+    end
+  end
+
+  describe "7" do
+    it "parser" do
+      dep.parse("light red bags contain 1 bright white bag, 2 muted yellow bags.").should eq({"light red", [{1, "bright white"}, {2, "muted yellow"}]})
+      dep.parse("dark orange bags contain 3 bright white bags, 4 muted yellow bags.").should eq({"dark orange", [{3, "bright white"}, {4, "muted yellow"}]})
+      dep.parse("dotted black bags contain no other bags.").should eq({"dotted black", [] of Bag})
+    end
+
+    it "part 1" do
+      input = ["light red bags contain 1 bright white bag, 2 muted yellow bags.",
+               "dark orange bags contain 3 bright white bags, 4 muted yellow bags.",
+               "bright white bags contain 1 shiny gold bag.",
+               "muted yellow bags contain 2 shiny gold bags, 9 faded blue bags.",
+               "shiny gold bags contain 1 dark olive bag, 2 vibrant plum bags.",
+               "dark olive bags contain 3 faded blue bags, 4 dotted black bags.",
+               "vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.",
+               "faded blue bags contain no other bags.",
+               "dotted black bags contain no other bags."]
+      solve_7_1(input).should eq(4)
+    end
+
+    it "part 2" do
+      input = [
+        "shiny gold bags contain 2 dark red bags.",
+        "dark red bags contain 2 dark orange bags.",
+        "dark orange bags contain 2 dark yellow bags.",
+        "dark yellow bags contain 2 dark green bags.",
+        "dark green bags contain 2 dark blue bags.",
+        "dark blue bags contain 2 dark violet bags.",
+        "dark violet bags contain no other bags.",
+      ]
+      solve_7_2(input).should eq(126)
     end
   end
 end
