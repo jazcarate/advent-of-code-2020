@@ -6,5 +6,6 @@ require "../src/4/main.cr"
 require "../src/5/main.cr"
 require "../src/6/main.cr"
 require "../src/7/main.cr"
+require "../src/8/main.cr"
 
 require "../src/common.cr"

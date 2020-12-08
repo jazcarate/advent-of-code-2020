@@ -152,4 +152,44 @@ describe "Advent of code" do
       solve_7_2(input).should eq(126)
     end
   end
+
+  describe "8" do
+    it "parser" do
+      instruction_line.parse("nop +0").should eq({"nop", 0})
+      instruction_line.parse("acc +1").should eq({"acc", 1})
+      instruction_line.parse("jmp -99").should eq({"jmp", -99})
+    end
+
+    it "part 1" do
+      input = [
+        "nop +0",
+        "acc +1",
+        "jmp +4",
+        "acc +3",
+        "jmp -3",
+        "acc -99",
+        "acc +1",
+        "jmp -4",
+        "acc +6",
+      ]
+
+      solve_8_1(input).should eq(5)
+    end
+
+    it "part 2" do
+      input = [
+        "nop +0",
+        "acc +1",
+        "jmp +4",
+        "acc +3",
+        "jmp -3",
+        "acc -99",
+        "acc +1",
+        "jmp -4",
+        "acc +6",
+      ]
+
+      solve_8_2(input).should eq(8)
+    end
+  end
 end
