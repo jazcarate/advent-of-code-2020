@@ -11,3 +11,8 @@ targets:
 crystal: 0.35.1
 
 license: MIT
+
+dependencies:
+  pars3k:
+    github: voximity/pars3k
+    branch: master
