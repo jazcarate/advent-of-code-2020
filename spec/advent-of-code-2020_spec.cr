@@ -192,4 +192,22 @@ describe "Advent of code" do
       solve_8_2(input).should eq(8)
     end
   end
+
+  describe "9" do
+    it "summing" do
+      one_though_twenrty_five = (1..25).map { |i| i }
+      is_sum?(26, one_though_twenrty_five).should eq(true)
+      is_sum?(49, one_though_twenrty_five).should eq(true)
+      is_sum?(100, one_though_twenrty_five).should eq(false)
+      is_sum?(50, one_though_twenrty_five).should eq(false)
+    end
+
+    it "solve" do
+      solve_9([35, 20, 15, 25, 47, 40, 62, 55, 65, 95, 102, 117, 150, 182, 127, 219, 299, 277, 309, 576], 5).should eq({127, 9})
+    end
+
+    it "contiguos" do
+      contiguos([35, 20, 15, 25, 47, 40, 62, 55, 65, 95, 102, 117, 150, 182, 127, 219, 299, 277, 309, 576], 127).should eq([15, 25, 47, 40])
+    end
+  end
 end
