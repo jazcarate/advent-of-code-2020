@@ -210,4 +210,10 @@ describe "Advent of code" do
       contiguos([35, 20, 15, 25, 47, 40, 62, 55, 65, 95, 102, 117, 150, 182, 127, 219, 299, 277, 309, 576], 127).should eq([15, 25, 47, 40])
     end
   end
+
+  describe "10" do
+    it "part 1" do
+      solve_10_1([16, 10, 15, 5, 1, 11, 7, 19, 6, 12, 4]).should eq(7*5)
+    end
+  end
 end
