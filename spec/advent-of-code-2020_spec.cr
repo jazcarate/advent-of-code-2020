@@ -216,4 +216,32 @@ describe "Advent of code" do
       solve_10_1([16, 10, 15, 5, 1, 11, 7, 19, 6, 12, 4]).should eq(7*5)
     end
   end
+
+  describe "11" do
+    it "part 1" do
+      solve_11_1(["L.LL.LL.LL",
+                  "LLLLLLL.LL",
+                  "L.L.L..L..",
+                  "LLLL.LL.LL",
+                  "L.LL.LL.LL",
+                  "L.LLLLL.LL",
+                  "..L.L.....",
+                  "LLLLLLLLLL",
+                  "L.LLLLLL.L",
+                  "L.LLLLL.LL"]).should eq(37)
+    end
+
+    it "part 2" do
+      solve_11_2(["L.LL.LL.LL",
+                  "LLLLLLL.LL",
+                  "L.L.L..L..",
+                  "LLLL.LL.LL",
+                  "L.LL.LL.LL",
+                  "L.LLLLL.LL",
+                  "..L.L.....",
+                  "LLLLLLLLLL",
+                  "L.LLLLLL.L",
+                  "L.LLLLL.LL"]).should eq(26)
+    end
+  end
 end
