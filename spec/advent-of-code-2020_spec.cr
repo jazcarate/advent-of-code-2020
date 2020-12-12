@@ -244,4 +244,22 @@ describe "Advent of code" do
                   "L.LLLLL.LL"]).should eq(26)
     end
   end
+
+  describe "12" do
+    it "part 1" do
+      solve_12_1(["F10",
+                  "N3",
+                  "F7",
+                  "R90",
+                  "F11"]).should eq(25)
+    end
+
+    it "part 1" do
+      solve_12_2(["F10",
+                  "N3",
+                  "F7",
+                  "R90",
+                  "F11"]).should eq(286)
+    end
+  end
 end
