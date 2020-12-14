@@ -262,4 +262,13 @@ describe "Advent of code" do
                   "F11"]).should eq(286)
     end
   end
+
+  describe "13" do
+    it "part 1" do
+      solve_13_1("939", "7,13,x,x,59,x,31,19").should eq(295)
+    end
+    it "part 2" do
+      solve_13_2("7,13,x,x,59,x,31,19").should eq(1068781)
+    end
+  end
 end
