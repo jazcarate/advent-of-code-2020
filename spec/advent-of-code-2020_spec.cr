@@ -268,7 +268,11 @@ describe "Advent of code" do
       solve_13_1("939", "7,13,x,x,59,x,31,19").should eq(295)
     end
     it "part 2" do
-      solve_13_2("7,13,x,x,59,x,31,19").should eq(1068781)
+      solve_13_2("17,x,13,19").should eq(3417)
+      solve_13_2("67,7,59,61").should eq(754018)
+      solve_13_2("67,x,7,59,61").should eq(779210)
+      solve_13_2("67,7,x,59,61").should eq(1261476)
+      solve_13_2("1789,37,47,1889").should eq(1202161486)
     end
   end
 end
