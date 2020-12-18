@@ -267,12 +267,33 @@ describe "Advent of code" do
     it "part 1" do
       solve_13_1("939", "7,13,x,x,59,x,31,19").should eq(295)
     end
+
     it "part 2" do
       solve_13_2("17,x,13,19").should eq(3417)
       solve_13_2("67,7,59,61").should eq(754018)
       solve_13_2("67,x,7,59,61").should eq(779210)
       solve_13_2("67,7,x,59,61").should eq(1261476)
       solve_13_2("1789,37,47,1889").should eq(1202161486)
+    end
+  end
+
+  describe "14" do
+    it "part 1" do
+      solve_14_1([
+        "mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X",
+        "mem[8] = 11",
+        "mem[7] = 101",
+        "mem[8] = 0",
+      ]).should eq(165)
+    end
+
+    it "part 2" do
+      solve_14_2([
+        "mask = 000000000000000000000000000000X1001X",
+        "mem[42] = 100",
+        "mask = 00000000000000000000000000000000X0XX",
+        "mem[26] = 1"
+      ]).should eq(208)
     end
   end
 end
