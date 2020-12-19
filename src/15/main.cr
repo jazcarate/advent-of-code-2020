@@ -29,7 +29,6 @@ module Foo
 
       prev = @@new_apparance[prev]? ? (@@new_apparance[prev] - @@last_apparance[prev]) : 0
       appear(prev, turn)
-      print "."
     end
 
     prev
