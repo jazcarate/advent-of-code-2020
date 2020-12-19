@@ -316,4 +316,10 @@ describe "Advent of code" do
       solve_16_1(["class: 1-3 or 5-7", "row: 6-11 or 33-44", "seat: 13-40 or 45-50"], ["7,3,47", "40,4,50", "55,2,20", "38,6,12"]).should eq(71)
     end
   end
+
+  describe "17" do
+    it "part 1" do
+      solve_17_1([".#.", "..#", "###"]).should eq(112)
+    end
+  end
 end
