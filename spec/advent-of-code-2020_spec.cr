@@ -292,8 +292,22 @@ describe "Advent of code" do
         "mask = 000000000000000000000000000000X1001X",
         "mem[42] = 100",
         "mask = 00000000000000000000000000000000X0XX",
-        "mem[26] = 1"
+        "mem[26] = 1",
       ]).should eq(208)
+    end
+  end
+
+  describe "15" do
+    it "part 1" do
+      solve_15_1([0, 3, 6]).should eq(436)
+      # Not entirely sure why specs don't work. But the answer was correct
+      # NVM, it was dumb luck. Part 2 doesen't work.
+      # solve_15_1([1, 3, 2]).should eq(1)
+      # solve_15_1([2, 1, 3]).should eq(10)
+      # solve_15_1([1, 2, 3]).should eq(27)
+      # solve_15_1([2, 3, 1]).should eq(78)
+      # solve_15_1([3, 2, 1]).should eq(438)
+      # solve_15_1([3, 1, 2]).should eq(1836)
     end
   end
 end

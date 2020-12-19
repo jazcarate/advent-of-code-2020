@@ -13,5 +13,6 @@ require "../src/11/main.cr"
 require "../src/12/main.cr"
 require "../src/13/main.cr"
 require "../src/14/main.cr"
+require "../src/15/main.cr"
 
 require "../src/common.cr"
